@@ -33,9 +33,9 @@ The website files are in the `website` folder. Each page is an HTML file:
 
 Before publishing changes to the live website, you can preview them on your computer:
 
-1. Tell your agent: **"Start a local web server to preview the website"**
+1. Tell your agent: **"Start a local web server from the website folder using python3 on port 8000"**
 2. The agent will start Python's built-in server
-3. Open your web browser and go to: `http://localhost:8000/website/`
+3. Open your web browser and go to: `http://localhost:8000/`
 4. You'll see your changes live
 5. When done previewing, tell your agent: **"Stop the local web server"**
 
