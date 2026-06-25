@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Bio</title>
+  <meta property="og:title" content="Bio" />
+  <meta property="og:image" content="https://res.cloudinary.com/philly-tango/image/upload/f_auto,q_auto/v1551116346/jp4wzfepxxgt0v4lks6l.jpg" />
+  <link rel="stylesheet" href="/css/main.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+</head>
+<body>
+  <!-- Fixed Header Navigation -->
+  <header id="header">
+    <div class="header-container">
+      <!-- Hamburger Menu Toggle -->
+      <div class="menu-toggle-wrapper" id="menu-toggle">
+        <button class="menu-icon-button" aria-label="Toggle menu">
+          <svg class="menu-icon" viewBox="0 0 24 24">
+            <path d="M3 18h18v-2H3v2zm0-5h18v-2H3v2zm0-7v2h18V6H3z"/>
+          </svg>
+        </button>
+      </div>
+
+      <!-- Logo -->
+      <div class="logo-container">
+        <div id="logo-link">
+          <!-- Logo SVG will be inserted by JavaScript -->
+        </div>
+      </div>
+
+      <!-- Registration Button (hidden on mobile) -->
+      <div class="header-button">
+        <a href="https://philadelphiatangoschool.cowtinker.com/schedule" class="btn-register" target="_blank">
+          Register for Classes
+        </a>
+      </div>
+    </div>
+  </header>
+
+  <!-- Mobile Drawer Menu -->
+  <div id="menu-drawer" class="menu-drawer">
+    <div class="menu-drawer-logo" id="drawer-logo">
+      <!-- Logo will be inserted by JavaScript -->
+    </div>
+    <div class="menu-drawer-divider"></div>
+    <nav>
+      <ul id="mobile-menu-list">
+        <!-- Menu items will be inserted by JavaScript -->
+      </ul>
+    </nav>
+    <div class="menu-drawer-divider"></div>
+    <div class="menu-drawer-button">
+      <a href="https://philadelphiatangoschool.cowtinker.com/schedule" class="btn-register" target="_blank">
+        Register for Classes
+      </a>
+    </div>
+  </div>
+
+  <!-- Main Content -->
+  <main id="main-content">
+    
+    <!-- Hero Image -->
+    <section class="hero-image">
+      <img src="/images/jp4wzfepxxgt0v4lks6l.jpg" alt="Bio" style="width: 100%; object-fit: cover; height: 50vh;">
+    </section>
+    
+
+    <!-- Page Content -->
+    <section class="detail-page-content">
+      <div class="container">
+        <article class="detail-article">
+          <h1 class="page-headline">Bio</h1>
+          <div class="page-content" id="page-content-markdown">
+            **Rebecca's Bio in her own words**
+
+"I am a Pacific Northwest native who had the great luck to discover Tango in 1999 while pursuing my BFA at the University of Oregon. After watching a single demonstration I knew there was no turning back- this Dance, this Music, had it’s hooks in me! I cherish these pre-youtube  years of my Tango youth. My small community had few learning resources at the time and few local events, so there were many living room sock Milongas and VHS tape rewinds of the dance scenes in Sally Potter’s The Tango Lesson (1997). There was grace in that pressure-free environment and it was formative to have visiting instructors of many styles who encouraged us to learn in both roles and find truths in each perspective. 
+
+"Realizing upon graduation that my artistic ardor was fulfilled through Tango I began instructing, organizing, and djing at Eugene's then newly opened Tango Center. My first trip to Buenos Aires in 2003 taught me many things, but primarily that even there in the birthplace of Tango, a new generation of dancers were pushing and redefining Tango’s priorities and aesthetics. I learned Tango beliefs and understandings shift and grow in constant reference to both what came before and the ever-evolving zeitgeist. My best teachers have always acknowledged this- never trapping Tango in narrow definitions, absolutes,  or one “right way”.
+
+"I began traveling to teach regionally and then abroad in England and India. In 2008 I partnered with Eric Lindgren and we moved to Boston in 2009 working through the MIT Tango Club until 2013 when we decided to move to Berlin. 
+
+"The 5 years I lived in Berlin polished my ability to work alone, with women, or men of tremendous diversity, at a high level of collaboration and efficacy. I worked mainly in the famous schools Mala Junta and Tangotanzenmachshoen teaching students in English and German.  Outside Berlin I taught and djed in numerous festivals, camps, and workshop weekends throughout Europe notably in Sweden, Poland, England, and Budapest. 
+
+"In 2018 I came home to Oregon. I am establishing myself now back in the USA and working hard to support, grow, and contribute to many small and large Tango communities in Oregon and beyond. My goal is to see Tango thrive into the future on healthy models of learning and strong, co-operative communities."
+          </div>
+        </article>
+
+        <!-- Teasers Section -->
+        
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer id="footer">
+    <div class="footer-container">
+      <div class="footer-content">
+        <div class="footer-left">
+          <div class="footer-logo">
+            <!-- White logo SVG will be inserted by JavaScript -->
+          </div>
+          <div class="footer-company">
+            <b>Philadelphia Argentine Tango School</b><br>
+            2030 Frankford Avenue<br>
+            Philadelphia, PA 19125<br>
+            617-291-3798<br>
+            meredithklein@gmail.com
+          </div>
+        </div>
+
+        <div class="footer-right">
+          <nav class="footer-menu">
+            <ul id="footer-menu-list">
+              <!-- Menu items will be inserted by JavaScript -->
+            </ul>
+          </nav>
+        </div>
+      </div>
+      <div class="footer-copyright">
+        © Meredith Klein 2018-<span id="footer-year"></span>. All rights reserved.
+      </div>
+    </div>
+  </footer>
+
+  <!-- Scripts -->
+  <script src="/js/data.js"></script>
+  <script src="/js/menu.js"></script>
+  <script src="/js/utils.js"></script>
+  <script src="/js/detail-page.js"></script>
+</body>
+</html>

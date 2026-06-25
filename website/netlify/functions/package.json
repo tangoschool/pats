@@ -1,0 +1,8 @@
+{
+  "name": "pats-netlify-functions",
+  "version": "1.0.0",
+  "description": "Netlify Functions for Philadelphia Argentine Tango School",
+  "dependencies": {
+    "stripe": "^8.140.0"
+  }
+}
