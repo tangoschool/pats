@@ -47,19 +47,17 @@ main {
    ============================================ */
 
 h1, h2, h3, h4, h5, h6 {
-  font-weight: 500;
+  font-weight: 700;
   line-height: 1.2;
-  margin: 0 0 1rem 0;
+  margin: 0 0 0.4rem 0;
 }
 
 h1 {
   font-size: 2.5rem;
-  font-weight: 400;
 }
 
 h2 {
   font-size: 2rem;
-  font-weight: 400;
 }
 
 h3 {
@@ -73,12 +71,18 @@ p {
 
 a {
   color: var(--color-primary);
-  text-decoration: none;
+  text-decoration: underline;
   transition: opacity 0.3s ease;
 }
 
 a:hover {
   opacity: 0.8;
+}
+
+.btn-register,
+.cta,
+.btn-primary {
+  text-decoration: none;
 }
 
 /* ============================================
@@ -135,14 +139,30 @@ a:hover {
   display: flex;
   align-items: center;
   justify-content: center;
-  border-radius: 50%;
+  gap: 4px;
+  border-radius: 4px;
   transition: background-color 0.3s ease;
-  width: 48px;
   height: 48px;
 }
 
+.menu-label {
+  font-size: 1rem;
+  font-weight: 700;
+  letter-spacing: 0.05em;
+  color: rgba(0, 0, 0, 0.54);
+  font-family: 'Roboto', sans-serif;
+}
+
 .menu-icon-button:hover {
-  background-color: rgba(0, 0, 0, 0.04);
+  background-color: rgba(176, 17, 22, 0.08);
+}
+
+.menu-icon-button:hover .menu-icon {
+  fill: var(--color-primary);
+}
+
+.menu-icon-button:hover .menu-label {
+  color: var(--color-primary);
 }
 
 .menu-icon {
@@ -193,15 +213,16 @@ a:hover {
 .header-button .btn-register {
   background-color: var(--color-primary);
   color: white;
-  padding: 10px 20px;
+  padding: 10px 44px;
   border-radius: 4px;
   font-weight: 500;
+  font-size: 1.1rem;
   white-space: nowrap;
 }
 
 .header-button .btn-register:hover {
   opacity: 1;
-  background-color: #8d0e12;
+  background-color: #c9383d;
 }
 
 @media (min-width: 600px) {
@@ -261,7 +282,7 @@ a:hover {
 /* Drawer menu items - matches Material-UI MenuItem */
 .drawer-menu-item {
   display: block;
-  padding: 12px 16px;
+  padding: 6px 16px;
   color: rgba(0, 0, 0, 0.87);
   line-height: 36px;
   transition: background-color 150ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;
@@ -273,7 +294,8 @@ a:hover {
 }
 
 .drawer-menu-item:hover {
-  background-color: rgba(0, 0, 0, 0.04);
+  background-color: rgba(176, 17, 22, 0.08);
+  color: var(--color-primary);
 }
 
 .menu-drawer-divider {
@@ -449,10 +471,22 @@ a:hover {
   min-width: 300px;
 }
 
-.teaser__content h2 {
+.teaser__content > h2 {
   color: var(--color-primary);
   margin: 0 0 15px 0;
-  font-size: 1.75rem;
+  font-size: 2.5rem;
+}
+
+.teaser__content .content h2 {
+  font-size: 1.5rem;
+  margin: 15px 0 0 0;
+  padding-bottom: 1rem;
+}
+
+.teaser__content .content h3 {
+  font-size: 1.2rem;
+  margin: 15px 0 0 0;
+  padding-bottom: 1rem;
 }
 
 .teaser__content .content {
@@ -528,19 +562,23 @@ a:hover {
 
 .page-headline {
   color: var(--color-primary);
-  margin: 0 0 30px 0;
-  max-width: 650px;
+  margin: 0 auto 0.7rem auto;
+  max-width: 900px;
 }
 
 .page-content {
   line-height: 1.8;
   font-size: 1rem;
+  margin-top: 0;
+  max-width: 900px;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .page-content h2,
 .page-content h3 {
   color: var(--color-primary);
-  margin: 30px 0 15px 0;
+  margin: 30px 0 0.4rem 0;
 }
 
 .page-content ul,

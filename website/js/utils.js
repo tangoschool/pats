@@ -23,7 +23,9 @@
       .replace(/\[([^\]]+)\]\(([^\)]+)\)/g, '<a href="$2">$1</a>')
       // Line breaks
       .replace(/\n\n/g, '</p><p>')
-      .replace(/\n/g, '<br>');
+      .replace(/\n/g, '<br>')
+      // Replace <br> immediately after a heading with a paragraph opening tag
+      .replace(/<\/(h[1-6])><br>/g, '</$1><p>');
   }
 
   // Get image URL with size parameters (if needed)

@@ -9,7 +9,7 @@
     // Parse markdown content
     const contentElement = document.getElementById('page-content-markdown');
     if (contentElement) {
-      const markdownText = contentElement.textContent;
+      const markdownText = contentElement.textContent.trim();
       contentElement.innerHTML = `<p>${window.parseMarkdown(markdownText)}</p>`;
     }
 
