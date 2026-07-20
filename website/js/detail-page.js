@@ -13,6 +13,26 @@
       contentElement.innerHTML = `<p>${window.parseMarkdown(markdownText)}</p>`;
     }
 
+    // Render hero carousel, if this page has one
+    const heroCarousel = document.getElementById('hero-carousel');
+    if (heroCarousel) {
+      try {
+        const sliderData = heroCarousel.getAttribute('data-slider-images');
+        if (sliderData) {
+          const sliderImages = JSON.parse(sliderData);
+          if (sliderImages && sliderImages.length > 0 && window.Carousel) {
+            heroCarousel.removeAttribute('data-slider-images');
+            new window.Carousel('carousel-container', sliderImages, {
+              autoplayInterval: 4000,
+              dragging: true
+            });
+          }
+        }
+      } catch (error) {
+        console.error('Failed to parse slider images data:', error);
+      }
+    }
+
     // Render page teasers
     const teasersElement = document.getElementById('page-teasers');
     if (teasersElement) {

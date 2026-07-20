@@ -94,7 +94,11 @@
       }
 
       const linkHtml = teaser.link
-        ? `<a href="${getLinkHref(teaser.link)}" class="cta">${teaser.linkText || 'Learn More'}</a>`
+        ? (() => {
+            const href = getLinkHref(teaser.link);
+            const externalAttrs = href.startsWith('http') ? ' target="_blank" rel="noopener"' : '';
+            return `<a href="${href}" class="cta"${externalAttrs}>${teaser.linkText || 'Learn More'}</a>`;
+          })()
         : '';
 
       article.innerHTML = `

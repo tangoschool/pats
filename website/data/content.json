@@ -1,68 +1,120 @@
 {
   "menu": [
     {
-      "linkName": "About PATS",
-      "link": "about"
+      "linkName": "About",
+      "link": "about",
+      "children": [
+        {
+          "linkName": "About PATS",
+          "link": "about"
+        },
+        {
+          "linkName": "Location & Parking",
+          "link": "parking-advice"
+        },
+        {
+          "linkName": "Press",
+          "link": "media"
+        },
+        {
+          "linkName": "Safer Spaces",
+          "link": "safer-spaces"
+        },
+        {
+          "linkName": "Performance Group",
+          "link": "see-the-PATS-performance-group"
+        },
+        {
+          "linkName": "Sliding Scale",
+          "link": "registration"
+        },
+        {
+          "linkName": "Policies",
+          "link": "policies"
+        }
+      ]
     },
     {
-      "linkName": "Press",
-      "link": "media"
+      "linkName": "Beginners, start here!",
+      "link": "beginners-start-here",
+      "children": [
+        {
+          "linkName": "Beginners, start here!",
+          "link": "beginners-start-here"
+        },
+        {
+          "linkName": "Beginner Intensive",
+          "link": "beginner-intensive"
+        },
+        {
+          "linkName": "Advanced Beginner Intensive",
+          "link": "advanced-beginner-intensive"
+        }
+      ]
     },
     {
-      "linkName": "Group Classes",
-      "link": "group-classes"
+      "linkName": "Classes",
+      "link": "group-classes",
+      "children": [
+        {
+          "linkName": "Group Classes",
+          "link": "group-classes"
+        },
+        {
+          "linkName": "Private Lessons",
+          "link": "private-lessons"
+        },
+        {
+          "linkName": "Special Workshops",
+          "link": "workshops"
+        }
+      ]
     },
     {
-      "linkName": "Private Lessons",
-      "link": "private-lessons"
-    },
-    {
-      "linkName": "Events",
+      "linkName": "Milongas & Practicas",
       "link": "in-person-events"
     },
     {
-      "linkName": "Parking Advice",
-      "link": "parking-advice"
+      "linkName": "Special Events",
+      "link": "",
+      "children": [
+        {
+          "linkName": "Philadelphia Tango Festival",
+          "link": "https://www.philadelphiatangofestival.com/"
+        },
+        {
+          "linkName": "Tours to Buenos Aires",
+          "link": "http://www.milongatours.com"
+        }
+      ]
     },
     {
-      "linkName": "Bochinche Records",
-      "link": "http://www.bochincherecords.com"
+      "linkName": "Music Production",
+      "link": "",
+      "children": [
+        {
+          "linkName": "Bochinche Records",
+          "link": "http://www.bochincherecords.com"
+        },
+        {
+          "linkName": "Tango en la Terraza",
+          "link": "https://www.tangoenlaterraza.com"
+        }
+      ]
     },
     {
-      "linkName": "Philadelphia Tango Festival",
-      "link": "https://www.philadelphiatangofestival.com/"
-    },
-    {
-      "linkName": "Tours to Buenos Aires",
-      "link": "http://www.milongatours.com"
-    },
-    {
-      "linkName": "Sliding Scale",
-      "link": "registration"
-    },
-    {
-      "linkName": "Performance Group",
-      "link": "see-the-PATS-performance-group"
-    },
-    {
-      "linkName": "Safer Spaces",
-      "link": "safer-spaces"
-    },
-    {
-      "linkName": "Tango en la Terraza",
-      "link": "https://www.tangoenlaterraza.com"
-    },
-    {
-      "linkName": "Join Our Email List!",
-      "link": "sign-up"
-    },
-    {
-      "linkName": "Policies",
-      "link": "policies"
-    },
-    {
-      "linkName": "Contact / Customer Service",
-      "link": "contact"
+      "linkName": "Contact",
+      "link": "",
+      "children": [
+        {
+          "linkName": "Contact Info",
+          "link": "contact"
+        },
+        {
+          "linkName": "Join Our Email List!",
+          "link": "sign-up"
+        }
+      ]
     }
   ],
   "pages": {

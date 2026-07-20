@@ -298,6 +298,106 @@ a:hover {
   color: var(--color-primary);
 }
 
+/* Drawer submenu groups (accordion) */
+.drawer-menu-parent {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-right: 8px;
+}
+
+.drawer-menu-label {
+  flex: 1;
+}
+
+.drawer-menu-toggle {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: none;
+  border: none;
+  padding: 6px;
+  margin: 0;
+  cursor: pointer;
+  color: rgba(0, 0, 0, 0.54);
+}
+
+.drawer-menu-chevron {
+  width: 20px;
+  height: 20px;
+  fill: currentColor;
+  transition: transform 200ms ease;
+}
+
+.drawer-menu-group.open .drawer-menu-toggle .drawer-menu-chevron {
+  transform: rotate(180deg);
+}
+
+.drawer-submenu {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 250ms ease;
+}
+
+.drawer-menu-group.open .drawer-submenu {
+  max-height: 500px;
+}
+
+.drawer-submenu-item {
+  padding-left: 32px;
+  font-size: 0.9rem;
+  background-color: rgba(0, 0, 0, 0.02);
+}
+
+.drawer-menu-group {
+  position: relative;
+}
+
+/* On devices with a real mouse, submenus open on hover as a flyout panel
+   next to the drawer instead of pushing the row below it down - that push
+   made the next item a moving target while scanning the menu. Touch devices
+   have no hover state, so click/tap (handled in menu.js, the push-down
+   .open styles above) stays the only way in on mobile. */
+@media (hover: hover) and (pointer: fine) {
+  /* .menu-drawer's overflow-y: auto forces overflow-x to auto too (a CSS
+     rule: a non-visible overflow-y coerces a visible overflow-x into auto),
+     which clips/scrolls the flyout instead of letting it render past the
+     drawer's right edge. Desktop viewports are tall enough that this short
+     menu never needs to scroll, so it's safe to drop here. */
+  .menu-drawer {
+    overflow: visible;
+  }
+
+  .drawer-submenu {
+    position: absolute;
+    top: 0;
+    left: 100%;
+    max-height: none;
+    overflow: visible;
+    min-width: 220px;
+    background-color: white;
+    box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.15);
+    border-radius: 0 4px 4px 0;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 150ms ease;
+  }
+
+  .drawer-menu-group.flyout-open .drawer-submenu {
+    opacity: 1;
+    pointer-events: auto;
+  }
+
+  .drawer-submenu-item {
+    padding-left: 16px;
+    background-color: transparent;
+  }
+
+  .drawer-menu-group.flyout-open .drawer-menu-toggle .drawer-menu-chevron {
+    transform: rotate(180deg);
+  }
+}
+
 .menu-drawer-divider {
   height: 1px;
   background-color: rgba(0, 0, 0, 0.12);
@@ -306,7 +406,7 @@ a:hover {
 }
 
 .menu-drawer-button {
-  padding: 16px;
+  padding: 12px 16px;
   margin: 10px 0 0 0;
 }
 
@@ -316,10 +416,11 @@ a:hover {
   text-align: center;
   background-color: var(--color-primary);
   color: white;
-  padding: 12px 16px;
+  padding: 8px 16px;
   border-radius: 4px;
   font-weight: 500;
-  line-height: 36px;
+  font-size: 0.9rem;
+  line-height: 26px;
   transition: background-color 0.3s ease;
 }
 
@@ -518,6 +619,44 @@ a:hover {
   order: 1;
 }
 
+/* Press page: smaller black headlines (instead of the site-wide large red
+   style) and a narrower text column, since this page is a long list of
+   many short press entries rather than a few full-width feature teasers. */
+.press-page .teaser__content > h2 {
+  color: #000;
+  font-size: 1.5rem;
+}
+
+.press-page .teaser__content {
+  max-width: 450px;
+}
+
+/* Press page: always image-left/text-right (overriding the alternating
+   left/right pattern) and a consistent image box, since 37 short entries
+   with images at wildly different sizes/aspect ratios and jumping sides
+   made the page hard to scan. */
+.press-page .teaser__image {
+  order: 0 !important;
+  min-width: 220px;
+  max-width: 260px;
+}
+
+.press-page .teaser__image img {
+  aspect-ratio: 4 / 3;
+  object-fit: cover;
+}
+
+.press-page .teaser__content {
+  order: 1;
+}
+
+/* The image+text pair is narrower than the full container now, so center
+   it instead of leaving it stuck against the left edge with empty space
+   trailing on the right. */
+.press-page .teaser {
+  justify-content: center;
+}
+
 /* Mobile responsive */
 @media (max-width: 900px) {
   .teaser {
@@ -527,6 +666,11 @@ a:hover {
 
   .teaser__image {
     order: 0 !important;
+    min-width: 100%;
+    max-width: 100%;
+  }
+
+  .press-page .teaser__image {
     min-width: 100%;
     max-width: 100%;
   }
