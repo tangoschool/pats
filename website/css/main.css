@@ -237,10 +237,10 @@ a:hover {
 
 .menu-drawer {
   position: fixed;
-  top: 0;
+  top: var(--header-height);
   left: -100%;
   width: 280px;
-  height: 100vh;
+  height: calc(100vh - var(--header-height));
   background-color: white;
   box-shadow: 2px 0 8px rgba(0,0,0,0.15);
   transition: left 0.3s ease;
@@ -254,10 +254,12 @@ a:hover {
   opacity: 1;
 }
 
+/* The drawer used to start at the very top of the page and cover the
+   header (hamburger icon + "MENU" label) with its own logo. Now that it
+   starts below the header, that logo is redundant with the one already
+   visible in the header itself, so it's hidden rather than shown twice. */
 .menu-drawer-logo {
-  padding: 10px;
-  cursor: pointer;
-  border-bottom: 1px solid #e0e0e0;
+  display: none;
 }
 
 .menu-drawer-logo svg {
