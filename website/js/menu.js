@@ -4,6 +4,25 @@
 (function() {
   'use strict';
 
+  // Social media links - shown as icons in the footer
+  const SOCIAL_LINKS = [
+    {
+      name: 'Facebook',
+      url: 'https://www.facebook.com/philadelphiatangoschool',
+      svg: '<svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M22 12c0-5.523-4.477-10-10-10S2 6.477 2 12c0 4.991 3.657 9.128 8.438 9.878v-6.987h-2.54V12h2.54V9.797c0-2.506 1.492-3.89 3.777-3.89 1.094 0 2.238.195 2.238.195v2.46h-1.26c-1.243 0-1.63.771-1.63 1.562V12h2.773l-.443 2.89h-2.33v6.988C18.343 21.128 22 16.991 22 12z"/></svg>'
+    },
+    {
+      name: 'Instagram',
+      url: 'https://www.instagram.com/philadelphiatango',
+      svg: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="5"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none"/></svg>'
+    },
+    {
+      name: 'YouTube',
+      url: 'https://www.youtube.com/@meredithklein',
+      svg: '<svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M23.498 6.186a2.997 2.997 0 0 0-2.112-2.121C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.386.52A2.997 2.997 0 0 0 .502 6.186 31.29 31.29 0 0 0 0 12a31.29 31.29 0 0 0 .502 5.814 2.997 2.997 0 0 0 2.112 2.121c1.881.52 9.386.52 9.386.52s7.505 0 9.386-.52a2.997 2.997 0 0 0 2.112-2.121A31.29 31.29 0 0 0 24 12a31.29 31.29 0 0 0-.502-5.814zM9.75 15.568V8.432L15.818 12 9.75 15.568z"/></svg>'
+    }
+  ];
+
   // State
   let isMenuOpen = false;
   let hoverCloseTimeout = null;
@@ -269,6 +288,17 @@
     const footerYear = document.getElementById('footer-year');
     if (footerYear) {
       footerYear.textContent = new Date().getFullYear();
+    }
+
+    // Footer social icons
+    const footerCompany = document.querySelector('.footer-company');
+    if (footerCompany && !document.querySelector('.footer-social')) {
+      const social = document.createElement('div');
+      social.className = 'footer-social';
+      social.innerHTML = SOCIAL_LINKS.map(function(s) {
+        return '<a href="' + s.url + '" target="_blank" rel="noopener noreferrer" aria-label="' + s.name + '">' + s.svg + '</a>';
+      }).join('');
+      footerCompany.insertAdjacentElement('afterend', social);
     }
   }
 

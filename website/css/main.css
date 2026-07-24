@@ -901,6 +901,29 @@ a:hover {
   font-weight: 500;
 }
 
+.footer-social {
+  display: flex;
+  gap: 20px;
+  margin-bottom: 20px;
+}
+
+.footer-social a {
+  color: white;
+  opacity: 0.9;
+  transition: opacity 0.3s ease;
+  line-height: 0;
+}
+
+.footer-social a:hover {
+  opacity: 0.6;
+}
+
+.footer-social svg {
+  width: 32px;
+  height: 32px;
+  display: block;
+}
+
 .footer-right {
   flex: 0 0 66.67%;
   max-width: 66.67%;
