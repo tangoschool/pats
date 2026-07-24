@@ -126,8 +126,15 @@
       return link;
     }
 
-    // Internal link - add .html extension
-    return `/${link}.html`;
+    // A link like "workshops#some-anchor" needs ".html" inserted before the
+    // fragment, not appended after it.
+    const hashIndex = link.indexOf('#');
+    if (hashIndex === -1) {
+      return `/${link}.html`;
+    }
+    const base = link.slice(0, hashIndex);
+    const hash = link.slice(hashIndex);
+    return `/${base}.html${hash}`;
   }
 
   // Export functions
