@@ -124,8 +124,23 @@
 
     if (path.startsWith('http://') || path.startsWith('https://')) {
       window.location.href = path;
+      return;
+    }
+
+    if (path === '/') {
+      window.location.href = '/index.html';
+      return;
+    }
+
+    // A path like "workshops#some-anchor" needs ".html" inserted before the
+    // fragment, not appended after it.
+    const hashIndex = path.indexOf('#');
+    if (hashIndex === -1) {
+      window.location.href = `/${path}.html`;
     } else {
-      window.location.href = path === '/' ? '/index.html' : `/${path}.html`;
+      const base = path.slice(0, hashIndex);
+      const hash = path.slice(hashIndex);
+      window.location.href = `/${base}.html${hash}`;
     }
   }
 

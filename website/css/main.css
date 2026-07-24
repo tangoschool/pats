@@ -552,6 +552,7 @@ a:hover {
   gap: 30px;
   margin: 30px 15px;
   padding: 0;
+  scroll-margin-top: calc(var(--header-height) + 15px);
 }
 
 .teaser__image {
@@ -589,11 +590,14 @@ a:hover {
 .teaser__content .content h3 {
   font-size: 1.2rem;
   margin: 15px 0 0 0;
-  padding-bottom: 0;
+  padding-bottom: 1rem;
 }
 
-.teaser__content .content h3 + p {
-  margin-top: 0;
+/* A day-of-week subheader (e.g. "Friday, August 21") immediately followed by
+   an italicized one-line subtitle should sit close to it, unlike a date
+   subheader followed by regular paragraph text, which keeps its normal gap. */
+.teaser__content .content h3:has(+ p > em:only-child) {
+  padding-bottom: 0;
 }
 
 .teaser__content .content {

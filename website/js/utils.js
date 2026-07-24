@@ -81,6 +81,9 @@
     teasers.forEach((teaser, index) => {
       const article = document.createElement('article');
       article.className = `teaser ${index % 2 === 0 ? 'image-left' : 'image-right'}`;
+      if (teaser.anchorId) {
+        article.id = teaser.anchorId;
+      }
 
       // Build teaser HTML
       let imageHtml = '';

@@ -49,6 +49,16 @@
         console.error('Failed to parse teasers data:', error);
       }
     }
+
+    // Teasers are inserted after the page has already loaded, so a URL
+    // fragment pointing at one (e.g. a teaser's anchorId) can arrive before
+    // the browser has anything to scroll to. Do it ourselves once rendered.
+    if (window.location.hash) {
+      const target = document.getElementById(window.location.hash.slice(1));
+      if (target) {
+        target.scrollIntoView();
+      }
+    }
   }
 
   // Initialize when DOM is ready
