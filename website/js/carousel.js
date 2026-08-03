@@ -54,6 +54,33 @@
       });
 
       this.container.appendChild(this.slidesElement);
+
+      // Prev/next arrows (only worth showing with more than one slide)
+      if (this.images.length > 1) {
+        const prevButton = document.createElement('button');
+        prevButton.type = 'button';
+        prevButton.className = 'carousel-prev';
+        prevButton.setAttribute('aria-label', 'Previous slide');
+        prevButton.innerHTML = '&#10094;';
+        prevButton.addEventListener('click', () => {
+          this.prev();
+          this.startAutoplay();
+        });
+
+        const nextButton = document.createElement('button');
+        nextButton.type = 'button';
+        nextButton.className = 'carousel-next';
+        nextButton.setAttribute('aria-label', 'Next slide');
+        nextButton.innerHTML = '&#10095;';
+        nextButton.addEventListener('click', () => {
+          this.next();
+          this.startAutoplay();
+        });
+
+        this.container.appendChild(prevButton);
+        this.container.appendChild(nextButton);
+      }
+
       this.updateSlide();
     }
 
