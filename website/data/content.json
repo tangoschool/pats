@@ -83,16 +83,16 @@
       "link": "",
       "children": [
         {
-          "linkName": "Martin & Maurizio",
-          "link": "workshops#martin-maldonado-maurizio-ghella"
-        },
-        {
           "linkName": "Philadelphia Tango Festival",
           "link": "https://www.philadelphiatangofestival.com/"
         },
         {
           "linkName": "Tours to Buenos Aires",
           "link": "http://www.milongatours.com"
+        },
+        {
+          "linkName": "Past Big Events",
+          "link": "past-big-events"
         }
       ]
     },
@@ -5052,15 +5052,15 @@
   },
   "homeTeasers": [
     {
-      "headline": "A Weekend with Martin & Maurizio",
-      "content": "### Saturday, August 29 & Sunday, August 30\n__Martin Maldonado & Maurizio Ghella__, both from Argentina and now based in Vienna, Austria, are internationally celebrated representatives of authentic Argentine tango tradition. We're thrilled to welcome them back to Philadelphia for a weekend of workshops, private lessons, and a special Milonga Qilombo with performance.\n\n### Saturday, August 29\n*Workshops, Pre-Milonga Class & Milonga Qilombo feat. a SHOW by Martin & Maurizio*\n\n__2-3:15 pm:__ Workshop (Intermediate & Up) - Giros and “Contragiros”: change of directions without interrupting the flow of movement\n\n__3:30-4:45 pm:__ Workshop (Intermediate & Up) - Enrosques in Giro for both, Interpreter and Proposer\n\n__8:30-9:30 pm:__ Pre-Milonga Class (All Levels) - Using simple tools to create an easy and smoother Tanda at the Milonga and how to Interpret with ease\n\n__9:30 pm-2 am:__ Milonga Qilombo with DJ Ignacio Ondartz and a SHOW by Martin & Maurizio\n\n### Sunday, August 30\n*Workshops*\n\n__2-3:15 pm:__ Workshop (Intermediate & Up) - Playing with the cadence of Rebounds to change directions and speed in the dance floor\n\n__3:30-4:45 pm:__ Workshop (Intermediate & Up) - Transforming the Rebound into a Giro with fluidity and how to play with its dynamics\n\n**Pre-registration has ended, but you are welcome to pay at the door.**\n\n__PRICING AT THE DOOR:__\n\nPre-Milonga Class + Milonga with Show: $60\nMilonga Qilombo only: $40\nSingle Workshop: $55\n\n__PRIVATE LESSONS__\n\nPrivate lessons are sold out.\n\n[Read their full bio here](/martin-maldonado-maurizio-ghella-bio.html)",
+      "headline": "Celebrating Laszlo",
+      "content": "### Wednesday, September 2\nThis week's Palermo Fishtown Milonga is in honor of Laszlo who is starting his 93rd year! Please join us! The milonga is FREE FOR ALL thanks to a generous gift by Laszlo. We'll have DJ Ignacio, a cake and birthday dance, and lots of great connections and beautiful tandas for all!\n\nAlso, please note that the intermediate class will be taught in September by Andres & Jennine.  We will continue to rotate through different teachers in this class.\n\n__7-8 pm:__ Beginner Tango - Start any week!  No partner needed! - Meredith & Jennine\n__8-9 pm:__ Intermediate Tango - Andres & Jennine\n__9 pm-midnight:__ Palermo Fishtown Milonga Celebrating Laszlo (FREE MILONGA!)",
       "videoUrl": "",
       "linkText": "",
       "link": "",
       "image": {
-        "url": "/images/martin-maurizio-weekend-aug2026.png",
-        "localPath": "/images/martin-maurizio-weekend-aug2026.png",
-        "title": "martin-maurizio-weekend-aug2026",
+        "url": "/newsletter-images/SEPT2_publicacion.png",
+        "localPath": "/newsletter-images/SEPT2_publicacion.png",
+        "title": "SEPT2_publicacion",
         "width": 1080,
         "height": 1350
       }
@@ -5108,13 +5108,6 @@
       "title": "replace-beginners_head",
       "width": 1920,
       "height": 1005
-    },
-    {
-      "url": "/images/weekendMM_head.png",
-      "localPath": "/images/weekendMM_head.png",
-      "title": "weekendMM_head",
-      "width": 851,
-      "height": 315
     },
     {
       "url": "https://res.cloudinary.com/philly-tango/image/upload/f_auto,q_auto/v1582046515/cwnl21v2oyvsrmqvcwdb.jpg",
