@@ -83,6 +83,10 @@
       "link": "",
       "children": [
         {
+          "linkName": "Tango Bardo LIVE",
+          "link": "milongas-practicas#tango-bardo-live"
+        },
+        {
           "linkName": "Philadelphia Tango Festival",
           "link": "https://www.philadelphiatangofestival.com/"
         },
@@ -5066,6 +5070,20 @@
       }
     },
     {
+      "headline": "Tango Bardo LIVE",
+      "content": "### Wednesday, September 23\nYes, it's nearly unbelievable, but also true... Tango Bardo will perform live for dancing at the Palermo Fishtown Milonga on Wednesday, September 23.  Tango Bardo is one of the most popular and danceable tango bands in the world.  They have traveled worldwide performing in festivals, milongas and theaters, since their founding in 2014.  Among many other honors, they won “Best Album of the Year” at the 21st Century Tango Awards in 2025, for the album, \"D'arienzo Anticrisis.\"\n\nDon't miss the chance to dance to Tango Bardo's infectious music in the intimate environment of the Philadelphia Argentine Tango School.\n\n__7-8 pm:__ Beginner Tango (Start any week!) - Meredith & Jennine\n__8-9 pm:__ Intermediate Tango - Andres & Jennine\n__9 pm-midnight:__ Palermo Fishtown Milonga with DJ Ignacio and TWO SETS FOR DANCING by TANGO BARDO\n\n__TICKETS__\n\nMilonga only: $50\nAdding the milonga if you also pay for a class (single class or with class card) on 9/23: $35\n\n### [REGISTER NOW](https://philadelphiatangoschool.cowtinker.com/om/workshops/tango-bardo-live-at-the-palermo-fishtown-milonga)\n\nWe expect that this event will sell out.  Please register early!",
+      "videoUrl": "",
+      "linkText": "",
+      "link": "",
+      "image": {
+        "url": "/newsletter-images/TB_publicacion.png",
+        "localPath": "/newsletter-images/TB_publicacion.png",
+        "title": "TB_publicacion",
+        "width": 1080,
+        "height": 1350
+      }
+    },
+    {
       "headline": "Tango Dance & Music Immersion: Buenos Aires",
       "content": "### January 16-25, 2027\n\nTango's magic lies in its diversity — and nowhere is that more palpable than in Buenos Aires. Join us for 10 days immersed in the full range of today's tango: historic milongas and experimental ones, 10-piece orchestras with singers, barefoot guitar-and-bandoneón duos in the grass, Golden Age classics and bold new compositions.\n\nOur tour includes:\n🏨 Accommodation at the beautiful La Luna Lila Tango Hotel\n💃 Six 1.5-hour workshops with world-renowned maestros, organized just for our group\n🎶 All milongas & concerts — including live music events made possible by our tour\n🚤 Group excursions, including a magical day of music, river, food and friends at Casa Azul in Tigre\n📸 Professional photos to remember it all\n✈️ Airport transfers, welcome & goodbye dinners\n\n\"Getting to dance and listen to so much live tango music took my dancing to another level!\" — Karen, 2026 tour\n\n$3,800 Early Bird (through 8/23) | $4,000 after\nA $700 deposit holds your place and locks in your price.\n\nTaxi dancer packages (with the best taxi dancers on earth) and single-occupancy lodging available.\n\nCome celebrate tango's richness — and support its cutting edge.\n\n👉 Details & sign-up: [www.milongatours.com](www.milongatours.com)\nQuestions? [meredithklein@gmail.com](mailto:meredithklein@gmail.com) | +1 617-291-3798",
       "videoUrl": "",
@@ -5108,6 +5126,13 @@
       "title": "replace-beginners_head",
       "width": 1920,
       "height": 1005
+    },
+    {
+      "url": "/newsletter-images/TB_head.png",
+      "localPath": "/newsletter-images/TB_head.png",
+      "title": "TB_head",
+      "width": 851,
+      "height": 315
     },
     {
       "url": "https://res.cloudinary.com/philly-tango/image/upload/f_auto,q_auto/v1582046515/cwnl21v2oyvsrmqvcwdb.jpg",

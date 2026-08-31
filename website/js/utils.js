@@ -23,6 +23,13 @@
       .replace(/\[([^\]]+)\]\(([^\)]+)\)/g, '<a href="$2">$1</a>')
       // Line breaks
       .replace(/\n\n/g, '</p><p>')
+      // A heading with a blank line on both sides (e.g. "### [REGISTER
+      // NOW](...)") just got wrapped in <p></p> by the rule above, which
+      // browsers "fix" by auto-closing the <p> early and leaving a stray
+      // empty paragraph behind — extra vertical space with no visible
+      // cause. Headings are already block-level, so strip that wrapping.
+      .replace(/<p>(<h[1-6]>)/g, '$1')
+      .replace(/(<\/h[1-6]>)<\/p>/g, '$1')
       .replace(/\n/g, '<br>')
       // Replace <br> immediately after a heading with a paragraph opening tag
       .replace(/<\/(h[1-6])><br>/g, '</$1><p>');
