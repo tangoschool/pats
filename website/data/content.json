@@ -83,8 +83,8 @@
       "link": "",
       "children": [
         {
-          "linkName": "Tango Bardo LIVE",
-          "link": "milongas-practicas#tango-bardo-live"
+          "linkName": "Tango Bardo",
+          "link": "Tango-Bardo-September-2026"
         },
         {
           "linkName": "Philadelphia Tango Festival",
@@ -5084,11 +5084,11 @@
       }
     },
     {
-      "headline": "Beginner Intensive: September 26 & 27",
-      "content": "The Beginner Intensive covers the basics of tango vocabulary, structure, technique and lead-and-follow improvisation. We change partners after every song, so there's no need to bring a partner. Open to students with no previous tango experience (or anyone wanting to review the basics).\n\n**Schedule:**\nSaturday, September 26, 2-4 pm\nSunday, September 27, 2-4 pm\n\nTaught by [Andres Amarilla](/andres.html) and [Meredith Klein](/meredith.html)\n\n**Cost:** $80/both days | $50/single day",
+      "headline": "Beginner Intensive",
+      "content": "### Saturday, September 26 & Sunday, September 27\nThe Beginner Intensive covers the basics of tango vocabulary, structure, technique and lead-and-follow improvisation. We change partners after every song, so there's no need to bring a partner. Open to students with no previous tango experience (or anyone wanting to review the basics).\n\n**Schedule:**\nSaturday, September 26, 2-4 pm\nSunday, September 27, 2-4 pm\n\nTaught by [Andres Amarilla](/andres.html) and [Meredith Klein](/meredith.html)\n\n**Cost:** $80/both days | $50/single day\n\nStudents who take the full Beginner Intensive receive free entrance to the [Milonga Qilombo](/milongas-practicas.html#milonga-qilombo-gabriel-catrinel) evening events on Saturday, September 26 (pre-milonga class and milonga).\n\n### [REGISTER NOW](https://philadelphiatangoschool.cowtinker.com/om/workshops/two-day-beginner-intensive-workshop-september-26-27)",
       "videoUrl": "",
-      "linkText": "Learn More & Register",
-      "link": "beginner-intensive",
+      "linkText": "",
+      "link": "",
       "image": {
         "url": "/images/Beginner-image.jpg",
         "localPath": "/images/Beginner-image.jpg",
@@ -5098,11 +5098,25 @@
       }
     },
     {
-      "headline": "Advanced Beginner Intensive: October 10 & 11",
-      "content": "The Advanced Beginner Intensive is for students who've taken our Beginner Intensive, completed our weekly beginner classes (about 8 weeks), or have equivalent experience. Covers cross system, the cross basic step, back ochos, lead-and-follow improvisation, floor navigation, and basic musicality, preparing students for our regular Intermediate-level classes.\n\n**Schedule:**\nSaturday, October 10, 2-4 pm\nSunday, October 11, 2-4 pm\n\nTaught by [Andres Amarilla](/andres.html) and [Meredith Klein](/meredith.html)\n\n**Cost:** $80/both days | $50/single day",
+      "headline": "Milonga Qilombo feat. Gabriel & Catrinel",
+      "content": "### Saturday, September 26\nWe are thrilled to welcome back to Philly two fantastic dancers, teachers and organizers, who are doing wonderful work building the tango community in Washington, DC: **Gabriel Gaumond** and **Catrinel Iftode**.  They'll give the all-levels pre-milonga class on Saturday, September 26 and Gabriel will DJ Milonga Qilombo.  Gabriel always leaves us soaring sky-high with his beautiful tandas and energetic cortinas.  Don't miss out!\n\n__8:30-9:30 pm:__ All-Levels Pre-Milonga Class with Gabriel & Catrinel\n__9:30 pm-2 am:__ Milonga Qilombo with DJ Gabriel Gaumond\n\n__TICKETS__ (Pre-register by 9/25 at midnight)\n\nClass + Milonga: $30\nMilonga Only: $20\n\nAt the door: $35 (class+milonga) or $25 (milonga only)\n\nFree admission for students completing both days of the [Beginner Intensive](/beginner-intensive) on September 26 & 27!\n\n### [REGISTER NOW](https://philadelphiatangoschool.cowtinker.com/om/workshops/milonga-qilombo-feat-gabriel-catrinel)",
       "videoUrl": "",
-      "linkText": "Learn More & Register",
-      "link": "advanced-beginner-intensive",
+      "linkText": "",
+      "link": "",
+      "image": {
+        "url": "/images/QUILOMBO_09_publicacion.png",
+        "localPath": "/images/QUILOMBO_09_publicacion.png",
+        "title": "QUILOMBO_09_publicacion",
+        "width": 1080,
+        "height": 1350
+      }
+    },
+    {
+      "headline": "Advanced Beginner Intensive",
+      "content": "### Saturday, October 10 & Sunday, October 11\nThe Advanced Beginner Intensive is for students who've taken our Beginner Intensive, completed our weekly beginner classes (about 8 weeks), or have equivalent experience. Covers cross system, the cross basic step, back ochos, lead-and-follow improvisation, floor navigation, and basic musicality, preparing students for our regular Intermediate-level classes.\n\n**Schedule:**\nSaturday, October 10, 2-4 pm\nSunday, October 11, 2-4 pm\n\nTaught by [Andres Amarilla](/andres.html) and [Meredith Klein](/meredith.html)\n\n**Cost:** $80/both days | $50/single day\n\n### [REGISTER NOW](https://philadelphiatangoschool.cowtinker.com/om/workshops/advanced-beginner-intensive-level-2-october-10-11-2026)",
+      "videoUrl": "",
+      "linkText": "",
+      "link": "",
       "image": {
         "url": "/images/Beginner-image.jpg",
         "localPath": "/images/Beginner-image.jpg",
@@ -5156,9 +5170,23 @@
       "height": 1005
     },
     {
+      "url": "/images/TBWRKSH_head.png",
+      "localPath": "/images/TBWRKSH_head.png",
+      "title": "TBWRKSH_head",
+      "width": 851,
+      "height": 315
+    },
+    {
       "url": "/newsletter-images/TB_head.png",
       "localPath": "/newsletter-images/TB_head.png",
       "title": "TB_head",
+      "width": 851,
+      "height": 315
+    },
+    {
+      "url": "/images/QUILOMBO_09_head.png",
+      "localPath": "/images/QUILOMBO_09_head.png",
+      "title": "QUILOMBO_09_head",
       "width": 851,
       "height": 315
     },
