@@ -99,7 +99,9 @@
       } else if (teaser.image) {
         const imgUrl = getImageUrl(teaser.image);
         if (imgUrl) {
-          imageHtml = `<img src="${imgUrl}" alt="${teaser.headline || ''}" loading="lazy">`;
+          // Headlines may contain inline HTML (e.g. <em>); alt text can't.
+          const alt = (teaser.headline || '').replace(/<[^>]*>/g, '');
+          imageHtml = `<img src="${imgUrl}" alt="${alt}" loading="lazy">`;
         }
       }
 

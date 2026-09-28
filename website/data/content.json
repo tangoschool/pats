@@ -83,6 +83,10 @@
       "link": "",
       "children": [
         {
+          "linkName": "<em>Nosferatu</em> Screening",
+          "link": "big-events#nosferatu"
+        },
+        {
           "linkName": "Philadelphia Tango Festival",
           "link": "https://www.philadelphiatangofestival.com/"
         },
@@ -5052,15 +5056,29 @@
   },
   "homeTeasers": [
     {
-      "headline": "Beginner Intensive",
-      "content": "### Saturday, September 26 & Sunday, September 27\nThe Beginner Intensive covers the basics of tango vocabulary, structure, technique and lead-and-follow improvisation. We change partners after every song, so there's no need to bring a partner. Open to students with no previous tango experience (or anyone wanting to review the basics).\n\n**Schedule:**\nSaturday, September 26, 2-4 pm\nSunday, September 27, 2-4 pm\n\nTaught by [Andres Amarilla](/andres.html) and [Meredith Klein](/meredith.html)\n\n**Cost:** $80/both days | $50/single day\n\nStudents who take the full Beginner Intensive receive free entrance to the [Milonga Qilombo](/milongas-practicas.html#milonga-qilombo-gabriel-catrinel) evening events on Saturday, September 26 (pre-milonga class and milonga).\n\n### [REGISTER NOW](https://philadelphiatangoschool.cowtinker.com/om/workshops/two-day-beginner-intensive-workshop-september-26-27)",
+      "headline": "A Deep Dive into Tango Structure",
+      "content": "### Thursdays starting October 1\n__7:30-8:30 pm__\n\nMost tango dancers know the words “parallel” and “cross,” but those labels only hint at the map of positions and possibilities underneath. In this Thursday class, visual presentations will make that map clear while you dance throughout the hour, practicing how to recognize patterns, recall useful positions, and find more options in the moment.\n\nTaught by [Andres](/andres.html). Intermediate level.\n\n**Cost:** $25 or use your class card or monthly pass\n\n### [REGISTER NOW](https://philadelphiatangoschool.cowtinker.com/schedule)",
       "videoUrl": "",
       "linkText": "",
       "link": "",
       "image": {
-        "url": "/newsletter-images/beginner-intensive-flyer.png",
-        "localPath": "/newsletter-images/beginner-intensive-flyer.png",
-        "title": "beginner-intensive-flyer",
+        "url": "/newsletter-images/deep-dive.jpeg",
+        "localPath": "/newsletter-images/deep-dive.jpeg",
+        "title": "deep-dive",
+        "width": 1388,
+        "height": 1390
+      }
+    },
+    {
+      "headline": "<em>Nosferatu</em> Screening with LIVE MUSIC Accompaniment",
+      "content": "### Saturday, October 31, 7:30 pm\nExperience F.W. Murnau’s haunting 1922 silent film _Nosferatu_ like never before, with a live cello performance by Brooklyn-based cellist **Agustin Uriburu** and an original score by Argentine composer **Claudio Peña**. This one-of-a-kind event merges cinema and music into an immersive, spine-tingling journey.\n\nThe performance has been presented to sold-out audiences at Bad Therapy Bar and Red Pavilion in Brooklyn.\n\n**Cost with pre-registration (by Thursday, October 29):**\n$25 - adults\n$15 - under 18\n\n### [BUY TICKETS](https://philadelphiatangoschool.cowtinker.com/om/workshops/nosferatu-screening-with-live-music-accompaniment)\n\n**Cost at the door (if not sold out):**\n$35 - adults\n$20 - under 18\n\nAfter the film screening, we'll hold our monthly tango dance, [Milonga Qilombo](/milongas-practicas.html#milonga-qilombo-gabriel-catrinel). Discounted tickets to Milonga Qilombo are available for _Nosferatu_ attendees.",
+      "videoUrl": "",
+      "linkText": "",
+      "link": "",
+      "image": {
+        "url": "/newsletter-images/NOSFERATU_10_publicacion.png",
+        "localPath": "/newsletter-images/NOSFERATU_10_publicacion.png",
+        "title": "NOSFERATU_10_publicacion",
         "width": 1080,
         "height": 1350
       }
@@ -5117,25 +5135,18 @@
       "height": 2364
     },
     {
+      "url": "/newsletter-images/NOSFERATU_10_head.png",
+      "localPath": "/newsletter-images/NOSFERATU_10_head.png",
+      "title": "NOSFERATU_10_head",
+      "width": 851,
+      "height": 315
+    },
+    {
       "url": "/images/replace-beginners_head.png",
       "localPath": "/images/replace-beginners_head.png",
       "title": "replace-beginners_head",
       "width": 1920,
       "height": 1005
-    },
-    {
-      "url": "/newsletter-images/beginners_10_head.png",
-      "localPath": "/newsletter-images/beginners_10_head.png",
-      "title": "beginners_10_head",
-      "width": 851,
-      "height": 315
-    },
-    {
-      "url": "/images/QUILOMBO_09_head.png",
-      "localPath": "/images/QUILOMBO_09_head.png",
-      "title": "QUILOMBO_09_head",
-      "width": 851,
-      "height": 315
     },
     {
       "url": "https://res.cloudinary.com/philly-tango/image/upload/f_auto,q_auto/v1582046515/cwnl21v2oyvsrmqvcwdb.jpg",

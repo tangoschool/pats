@@ -270,7 +270,10 @@
       });
 
       footerMenuList.innerHTML = flatItems.map(item => {
-        const href = item.link.startsWith('http') ? item.link : `/${item.link}.html`;
+        // Insert ".html" before any "#anchor", as in handleNavigation.
+        const href = item.link.startsWith('http')
+          ? item.link
+          : `/${item.link.replace(/^([^#]*)/, '$1.html')}`;
         return `<li><a href="${href}">${item.linkName}</a></li>`;
       }).join('');
     }
