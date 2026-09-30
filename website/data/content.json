@@ -87,6 +87,10 @@
           "link": "big-events#nosferatu"
         },
         {
+          "linkName": "Halloween Milonga Qilombo",
+          "link": "big-events#halloween-milonga-qilombo"
+        },
+        {
           "linkName": "Philadelphia Tango Festival",
           "link": "https://www.philadelphiatangofestival.com/"
         },
@@ -5080,6 +5084,20 @@
         "url": "/newsletter-images/NOSFERATU_10_publicacion.png",
         "localPath": "/newsletter-images/NOSFERATU_10_publicacion.png",
         "title": "NOSFERATU_10_publicacion",
+        "width": 1080,
+        "height": 1350
+      }
+    },
+    {
+      "headline": "Special Halloween Milonga Qilombo",
+      "content": "### A Doubly Creepy, Double Live Music Event\n### Saturday, October 31\nJoin us for the spookiest Halloween on Saturday, October 31!\n\nThe night starts with a special presentation of F.W. Murnau’s haunting 1922 silent film _Nosferatu_ with a live cello performance (see above).\n\nThen we continue with a Special Halloween Milonga Qilombo (costumes welcome!) with DJ Meredith Klein, and LIVE MUSIC by Guitarist **Fede Diaz** and Bandoneonist **Rodrigo Avalos**, performing the Troilo-Grela arrangements.\n\nThis is a doubly creepy, double-live-music evening that you don’t want to miss.\n\n### Schedule\n__Saturday, October 31__\n__7:30–9:15 pm:__ _Nosferatu_ with Live Music by Cellist **Agustin Uriburu** (includes a 10-minute intermission)\n__9:30 pm–2:00 am:__ Milonga Qilombo with Live Music by Guitarist **Fede Diaz** & Bandoneonist **Rodrigo Avalos**, performing the Troilo-Grela arrangements for dancing\n\nRegistration for _Nosferatu_ is [here](https://philadelphiatangoschool.cowtinker.com/om/workshops/nosferatu-screening-with-live-music-accompaniment).\n\n**Milonga Qilombo Pricing with pre-registration:**\n$35 if you ALSO purchase a _Nosferatu_ ticket\n$40 Milonga only\n\n### [REGISTER FOR QILOMBO](https://philadelphiatangoschool.cowtinker.com/om/workshops/special-halloween-milonga-qilombo-with-live-music)\n\n**Milonga Qilombo Pricing at the door:**\n$35 if you ALSO purchase a _Nosferatu_ ticket\n$45 Milonga only",
+      "videoUrl": "",
+      "linkText": "",
+      "link": "",
+      "image": {
+        "url": "/newsletter-images/Qilombo_10_2_publicacion.png",
+        "localPath": "/newsletter-images/Qilombo_10_2_publicacion.png",
+        "title": "Qilombo_10_2_publicacion",
         "width": 1080,
         "height": 1350
       }
