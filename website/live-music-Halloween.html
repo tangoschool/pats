@@ -6,6 +6,7 @@
   <link rel="icon" href="/favicon.ico">
   <title>Live Music Halloween</title>
   <meta property="og:title" content="Live Music Halloween" />
+  <meta property="og:image" content="/newsletter-images/NOSFERATU_10_2_FBevent.png" />
   <link rel="stylesheet" href="/css/main.css">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
@@ -62,18 +63,23 @@
   <!-- Main Content -->
   <main id="main-content">
 
+    <!-- Hero Carousel -->
+    <section id="hero-carousel" class="hero-carousel" data-slider-images='[{"url":"/newsletter-images/NOSFERATU_10_registration.png","localPath":"/newsletter-images/NOSFERATU_10_registration.png","title":"NOSFERATU_10_registration","width":2918,"height":1080}]'>
+      <div id="carousel-container" class="carousel-container"></div>
+      <div class="carousel-loading">
+        <div class="spinner"></div>
+      </div>
+    </section>
+
 
     <!-- Page Content -->
     <section class="detail-page-content">
       <div class="container">
-        <article class="detail-article">
-          <h1 class="page-headline">Live Music Halloween</h1>
-          <div class="page-content" id="page-content-markdown">
-            Content coming soon.
-          </div>
-        </article>
-
         <!-- Teasers Section -->
+
+        <div id="page-teasers" data-teasers='[{"headline":"<em>Nosferatu</em> Screening with LIVE MUSIC Accompaniment","anchorId":"nosferatu","content":"### Saturday, October 31, 7:30 pm\nExperience F.W. Murnau’s haunting 1922 silent film _Nosferatu_ like never before, with a live cello performance by Brooklyn-based cellist **Agustin Uriburu** and an original score by Argentine composer **Claudio Peña**. This one-of-a-kind event merges cinema and music into an immersive, spine-tingling journey.\n\nThe performance has been presented to sold-out audiences at Bad Therapy Bar and Red Pavilion in Brooklyn.\n\n**Cost with pre-registration (by Thursday, October 29):**\n$25 - adults\n$15 - under 18\n\n### [BUY TICKETS](https://philadelphiatangoschool.cowtinker.com/om/workshops/nosferatu-screening-with-live-music-accompaniment)\n\n**Cost at the door (if not sold out):**\n$35 - adults\n$20 - under 18\n\nAfter the film screening, we&#39;ll hold our monthly tango dance, Milonga Qilombo. Discounted tickets to Milonga Qilombo are available for _Nosferatu_ attendees.","videoUrl":"","linkText":"","link":"","image":{"url":"/newsletter-images/NOSFERATU_10_publicacion.png","localPath":"/newsletter-images/NOSFERATU_10_publicacion.png","title":"NOSFERATU_10_publicacion","width":1080,"height":1350}},{"headline":"Special Halloween Milonga Qilombo","anchorId":"halloween-milonga-qilombo","content":"### A Doubly Creepy, Double Live Music Event\n### Saturday, October 31\nJoin us for the spookiest Halloween on Saturday, October 31!\n\nThe night starts with a special presentation of F.W. Murnau’s haunting 1922 silent film _Nosferatu_ with a live cello performance (see above).\n\nThen we continue with a Special Halloween Milonga Qilombo (costumes welcome!) with DJ Meredith Klein, and LIVE MUSIC by Guitarist **Fede Diaz** and Bandoneonist **Rodrigo Avalos**, performing the Troilo-Grela arrangements.\n\nThis is a doubly creepy, double-live-music evening that you don’t want to miss.\n\n### Schedule\n__Saturday, October 31__\n__7:30–9:15 pm:__ _Nosferatu_ with Live Music by Cellist **Agustin Uriburu** (includes a 10-minute intermission)\n__9:30 pm–2:00 am:__ Milonga Qilombo with Live Music by Guitarist **Fede Diaz** & Bandoneonist **Rodrigo Avalos**, performing the Troilo-Grela arrangements for dancing\n\nRegistration for _Nosferatu_ is [here](https://philadelphiatangoschool.cowtinker.com/om/workshops/nosferatu-screening-with-live-music-accompaniment).\n\n**Milonga Qilombo Pricing with pre-registration:**\n$35 if you ALSO purchase a _Nosferatu_ ticket\n$40 Milonga only\n\n### [REGISTER FOR QILOMBO](https://philadelphiatangoschool.cowtinker.com/om/workshops/special-halloween-milonga-qilombo-with-live-music)\n\n**Milonga Qilombo Pricing at the door:**\n$35 if you ALSO purchase a _Nosferatu_ ticket\n$45 Milonga only","videoUrl":"","linkText":"","link":"","image":{"url":"/newsletter-images/Qilombo_10_2_publicacion.png","localPath":"/newsletter-images/Qilombo_10_2_publicacion.png","title":"Qilombo_10_2_publicacion","width":1080,"height":1350}}]'>
+          <!-- Teasers will be rendered by JavaScript -->
+        </div>
 
       </div>
     </section>
@@ -112,6 +118,7 @@
 
   <!-- Scripts -->
   <script src="/js/data.js"></script>
+  <script src="/js/carousel.js"></script>
   <script src="/js/menu.js"></script>
   <script src="/js/utils.js"></script>
   <script src="/js/detail-page.js"></script>
