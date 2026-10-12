@@ -49,10 +49,6 @@
         {
           "linkName": "Beginner Intensive",
           "link": "beginner-intensive"
-        },
-        {
-          "linkName": "Advanced Beginner Intensive",
-          "link": "advanced-beginner-intensive"
         }
       ]
     },
@@ -270,7 +266,7 @@
     },
     "about": {
       "headline": "Who We Are",
-      "content": "Since 2008, the **Philadelphia Argentine Tango School (PATS)** has been promoting Argentine tango as a form of dance, music and poetry that can enrich anyone’s life.  Tango dancing is based on walking, and is accessible to people of all ages.  Tango music is in the midst of a renaissance and, as one of the leading tango music presenters in the United States, PATS is honored to be part of that.\n\nOur offerings include: \n* group and private dance classes, both in person and online; \n* workshops on special topics;\n* small and large social dances (called practicas and milongas); \n* guest residencies by tango performers and teachers of international stature; \n* live tango music, from small events with a solo musician to full orchestras; \n* tango performances; \n* lectures and workshops on the history of tango and related topics; and \n* first dance preparation.  \n\nWe organize the [Philly Tango Festival](http://philadelphiatangofestival.com) and the Fishtown Salon Concert Series.  We often hold workshop series on techniques that help prepare the body for tango and help us stay healthy as dancers, including Classical Ballet, Hatha Yoga, Alexander Technique and Biotensegrity.\n\nDuring the pandemic, we became one of the leading presenters of online tango content including lectures, dance classes for individuals and couples, and livestream music events.  We held an entire Virtual Tango Festival featuring 49 artists from around the world in May 2020, and an 11-hour New Year's Eve streaming event featuring many of the greatest tango musicians of our time.  \n\nWe continue to offer a hybrid schedule of [in-person](/in-person-group-classes.html) and [online classes](/online-class-offerings.html), milongas and practicas, concerts, and other events.\n\n[See photos from our events on Flickr](https://www.flickr.com/photos/51619376@N03/albums)\n[Watch videos on YouTube](https://www.youtube.com/channel/UCZ6kFsGJdtjPSUYm1CYk8CQ)\n\nFollow us on\n[facebook](https://www.facebook.com/philadelphiatangoschool)\n[IG](https://www.instagram.com/philadelphiatango)",
+      "content": "Since 2008, the **Philadelphia Argentine Tango School (PATS)** has been promoting Argentine tango as a form of dance, music and poetry that can enrich anyone’s life.  Tango dancing is based on walking, and is accessible to people of all ages.  Tango music is in the midst of a renaissance and, as one of the leading tango music presenters in the United States, PATS is honored to be part of that.\n\nOur offerings include: \n* group and private dance classes, both in person and online; \n* workshops on special topics;\n* small and large social dances (called practicas and milongas); \n* guest residencies by tango performers and teachers of international stature; \n* live tango music, from small events with a solo musician to full orchestras; \n* tango performances; \n* lectures and workshops on the history of tango and related topics; and \n* first dance preparation.  \n\nWe organize the [Philly Tango Festival](http://philadelphiatangofestival.com) and the Fishtown Salon Concert Series.  We often hold workshop series on techniques that help prepare the body for tango and help us stay healthy as dancers, including Classical Ballet, Hatha Yoga, Alexander Technique and Biotensegrity.\n\nDuring the pandemic, we became one of the leading presenters of online tango content including lectures, dance classes for individuals and couples, and livestream music events.  We held an entire Virtual Tango Festival featuring 49 artists from around the world in May 2020, and an 11-hour New Year's Eve streaming event featuring many of the greatest tango musicians of our time.  \n\nWe continue to offer a hybrid schedule of in-person and online classes, milongas and practicas, concerts, and other events.\n\n[See photos from our events on Flickr](https://www.flickr.com/photos/51619376@N03/albums)\n[Watch videos on YouTube](https://www.youtube.com/channel/UCZ6kFsGJdtjPSUYm1CYk8CQ)\n\nFollow us on\n[facebook](https://www.facebook.com/philadelphiatangoschool)\n[IG](https://www.instagram.com/philadelphiatango)",
       "image": {
         "url": "https://res.cloudinary.com/philly-tango/image/upload/f_auto,q_auto/v1539618638/ngqrikrfrigadow9ddzw.jpg",
         "localPath": "/images/ngqrikrfrigadow9ddzw.jpg",
@@ -5058,20 +5054,6 @@
         "title": "deep-dive",
         "width": 1388,
         "height": 1390
-      }
-    },
-    {
-      "headline": "Advanced Beginner Intensive",
-      "content": "### Saturday, October 10 & Sunday, October 11\nThe Advanced Beginner Intensive is for students who've taken our Beginner Intensive, completed our weekly beginner classes (about 8 weeks), or have equivalent experience. Covers cross system, the cross basic step, back ochos, lead-and-follow improvisation, floor navigation, and basic musicality, preparing students for our regular Intermediate-level classes.\n\n**Schedule:**\nSaturday, October 10, 2-4 pm\nSunday, October 11, 2-4 pm\n\nTaught by [Andres Amarilla](/andres.html) and [Meredith Klein](/meredith.html)\n\n**Cost:** $80/both days | $50/single day\n\n### [REGISTER NOW](https://philadelphiatangoschool.cowtinker.com/om/workshops/advanced-beginner-intensive-level-2-october-10-11-2026)",
-      "videoUrl": "",
-      "linkText": "",
-      "link": "",
-      "image": {
-        "url": "/images/Beginner-image.jpg",
-        "localPath": "/images/Beginner-image.jpg",
-        "title": "Beginner-image",
-        "width": 1200,
-        "height": 900
       }
     },
     {
