@@ -559,6 +559,28 @@ a:hover {
   padding: 30px 0;
 }
 
+.home-intro {
+  padding: 30px 0 0;
+  text-align: center;
+}
+
+.home-intro h1 {
+  color: var(--color-primary);
+  font-size: 2rem;
+  margin-bottom: 0.7rem;
+}
+
+.home-intro p {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+@media (max-width: 768px) {
+  .home-intro h1 {
+    font-size: 1.6rem;
+  }
+}
+
 #teasers-container {
   margin: 0;
 }
