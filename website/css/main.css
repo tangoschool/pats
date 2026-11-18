@@ -614,6 +614,15 @@ a:hover {
   min-width: 300px;
 }
 
+/* Light divider line between teasers, and above the first teaser when
+   there is text before the list (class added by renderTeasers). */
+.teaser + .teaser,
+.teasers--after-text > .teaser:first-child {
+  border-top: 1px solid #c4c4c4;
+  margin-top: 40px;
+  padding-top: 40px;
+}
+
 /* Teaser with "imageMaxWidth" set in content.json: fixed narrower image
    column so a tall image (like the logo) doesn't outgrow its text. */
 .teaser__image--capped {
@@ -730,6 +739,21 @@ a:hover {
   .press-page .teaser__image {
     min-width: 100%;
     max-width: 100%;
+  }
+
+  /* Tighter spacing around the teaser divider lines on phones. */
+  .teaser {
+    margin-bottom: 20px;
+  }
+
+  .teaser + .teaser,
+  .teasers--after-text > .teaser:first-child {
+    margin-top: 20px;
+    padding-top: 20px;
+  }
+
+  .teasers--after-text > .teaser:first-child {
+    margin-top: 0;
   }
 
   /* On phones, keep a capped image at its small size, centered, instead of

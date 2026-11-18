@@ -132,6 +132,16 @@
 
       container.appendChild(article);
     });
+
+    // Draw a divider line above the first teaser only when there is text
+    // before the teaser list (the home page intro, or a detail page's own
+    // body text). Lines between teasers are handled purely in CSS.
+    const pageBody = document.getElementById('page-content-markdown');
+    const hasPriorText = document.querySelector('.home-intro') ||
+      (pageBody && pageBody.textContent.trim() !== '');
+    if (hasPriorText) {
+      container.classList.add('teasers--after-text');
+    }
   }
 
   // Get proper href for link
