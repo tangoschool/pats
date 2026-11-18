@@ -241,6 +241,9 @@ a:hover {
   left: -100%;
   width: 280px;
   height: calc(100vh - var(--header-height));
+  /* Phones: 100vh includes the area under the browser toolbar, which hid
+     the bottom menu items; dvh is the actually-visible height. */
+  height: calc(100dvh - var(--header-height));
   background-color: white;
   box-shadow: 2px 0 8px rgba(0,0,0,0.15);
   transition: left 0.3s ease;

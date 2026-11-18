@@ -26,6 +26,18 @@
   // State
   let isMenuOpen = false;
   let hoverCloseTimeout = null;
+  let hoverOpenedAt = 0;
+
+  // How long the pointer may be outside the drawer before it closes
+  const DRAWER_CLOSE_DELAY = 400;
+
+  // Flyout "aim" state - see handleDrawerMouseover()
+  const AIM_DELAY = 300;      // ms to wait before re-checking where the pointer is headed
+  const AIM_TOLERANCE = 75;   // px of slack above/below the open flyout
+  const mouseLocs = [];       // last few pointer positions
+  let activeGroup = null;     // the group whose flyout is showing
+  let aimTimeout = null;
+  let lastDelayLoc = null;
 
   // Only devices with a real mouse get hover-to-open; touch has no hover
   const hoverQuery = window.matchMedia('(hover: hover) and (pointer: fine)');
@@ -49,7 +61,9 @@
     }
     if (menuDrawer) {
       attachHoverOpen(menuDrawer);
+      menuDrawer.addEventListener('mouseover', handleDrawerMouseover);
     }
+    document.addEventListener('mousemove', trackMouse);
 
     // Logo click to go home
     if (logoLink) {
@@ -77,6 +91,11 @@
   // Toggle drawer menu
   function toggleMenu(e) {
     e.stopPropagation();
+    // With a mouse, hovering MENU already opened the drawer, so a click that
+    // follows right after is meant to open it too - don't let it close it.
+    if (isMenuOpen && hoverQuery.matches && Date.now() - hoverOpenedAt < 1000) {
+      return;
+    }
     if (isMenuOpen) {
       closeMenu();
     } else {
@@ -94,6 +113,8 @@
   function closeMenu() {
     isMenuOpen = false;
     menuDrawer.classList.remove('open');
+    clearTimeout(aimTimeout);
+    setActiveGroup(null);
   }
 
   // Open the drawer on mouseenter and close it on mouseleave, with a short
@@ -106,6 +127,7 @@
         clearTimeout(hoverCloseTimeout);
         hoverCloseTimeout = null;
       }
+      if (!isMenuOpen) hoverOpenedAt = Date.now();
       openMenu();
     });
 
@@ -114,7 +136,7 @@
       if (hoverCloseTimeout) {
         clearTimeout(hoverCloseTimeout);
       }
-      hoverCloseTimeout = setTimeout(closeMenu, 150);
+      hoverCloseTimeout = setTimeout(closeMenu, DRAWER_CLOSE_DELAY);
     });
   }
 
@@ -177,31 +199,81 @@
     }
   }
 
-  // Open a group's flyout on hover and close it after a grace period, so
-  // briefly leaving the hoverable area (e.g. while moving diagonally toward
-  // a lower item) doesn't close it before the pointer arrives. mouseenter/
-  // mouseleave consider the whole subtree, so this covers both the trigger
-  // row and the flyout panel itself even though the flyout renders outside
-  // the row's own box.
-  function attachSubmenuHover(groupEl) {
-    groupEl.addEventListener('mouseenter', function() {
-      if (!hoverQuery.matches) return;
-      if (groupEl._flyoutCloseTimeout) {
-        clearTimeout(groupEl._flyoutCloseTimeout);
-        groupEl._flyoutCloseTimeout = null;
-      }
-      groupEl.classList.add('flyout-open');
-    });
+  // ---- Flyout submenus (mouse only) ----
+  //
+  // Only one flyout shows at a time, beside its row. Reaching a lower item
+  // in a flyout means moving the pointer diagonally, which crosses the rows
+  // below the one you started on. Switching flyouts the moment the pointer
+  // touches those rows made the flyout you were heading for vanish under a
+  // different one. So, like most desktop menus ("menu aim"), while the
+  // pointer is moving toward the open flyout we keep it open, and only
+  // switch once the pointer pauses on a row or moves some other way.
 
-    groupEl.addEventListener('mouseleave', function() {
-      if (!hoverQuery.matches) return;
-      if (groupEl._flyoutCloseTimeout) {
-        clearTimeout(groupEl._flyoutCloseTimeout);
-      }
-      groupEl._flyoutCloseTimeout = setTimeout(function() {
-        groupEl.classList.remove('flyout-open');
-      }, 300);
-    });
+  function trackMouse(e) {
+    mouseLocs.push({ x: e.clientX, y: e.clientY });
+    if (mouseLocs.length > 3) mouseLocs.shift();
+  }
+
+  function setActiveGroup(groupEl) {
+    if (activeGroup === groupEl) return;
+    if (activeGroup) activeGroup.classList.remove('flyout-open');
+    activeGroup = groupEl;
+    if (activeGroup) activeGroup.classList.add('flyout-open');
+  }
+
+  // Returns a delay (ms) if the pointer is heading toward the open flyout,
+  // or 0 if it's fine to switch now.
+  function aimDelay() {
+    if (!activeGroup) return 0;
+    const flyout = activeGroup.querySelector('.drawer-submenu');
+    const loc = mouseLocs[mouseLocs.length - 1];
+    const prev = mouseLocs[0];
+    if (!flyout || !loc || !prev) return 0;
+
+    // Pointer hasn't moved since we last waited: it has stopped on this row.
+    if (lastDelayLoc && loc.x === lastDelayLoc.x && loc.y === lastDelayLoc.y) {
+      return 0;
+    }
+
+    const r = flyout.getBoundingClientRect();
+    if (loc.x >= r.left) return 0;
+    const upper = { x: r.left, y: r.top - AIM_TOLERANCE };
+    const lower = { x: r.left, y: r.bottom + AIM_TOLERANCE };
+    const slope = (a, b) => (b.y - a.y) / (b.x - a.x);
+
+    // Moving toward the flyout = the angle to its top-left corner narrows
+    // from above and the angle to its bottom-left corner narrows from below.
+    if (slope(loc, upper) < slope(prev, upper) &&
+        slope(loc, lower) > slope(prev, lower)) {
+      lastDelayLoc = loc;
+      return AIM_DELAY;
+    }
+    lastDelayLoc = null;
+    return 0;
+  }
+
+  // Pointer is over a row: activate that row's flyout (or none, for rows
+  // without a submenu) unless the pointer is on its way to the open flyout.
+  function aimAt(groupEl) {
+    clearTimeout(aimTimeout);
+    if (groupEl === activeGroup) return;
+    const delay = aimDelay();
+    if (delay) {
+      aimTimeout = setTimeout(function() { aimAt(groupEl); }, delay);
+    } else {
+      setActiveGroup(groupEl);
+    }
+  }
+
+  function handleDrawerMouseover(e) {
+    if (!hoverQuery.matches) return;
+    // Pointer reached a flyout: keep it, cancel any pending switch.
+    if (e.target.closest('.drawer-submenu')) {
+      clearTimeout(aimTimeout);
+      return;
+    }
+    // A group row, or null for plain rows / the Register button / blank space
+    aimAt(e.target.closest('.drawer-menu-group'));
   }
 
   // Render menu items
@@ -226,15 +298,23 @@
         });
       });
 
-      // Group headers navigate if they have their own page, otherwise just toggle
+      // Group headers: on touch, toggle the submenu; with a mouse, navigate
+      // to the group's page if it has one, otherwise show its flyout
       mobileMenuList.querySelectorAll('.drawer-menu-parent').forEach(el => {
         el.addEventListener('click', function(e) {
           if (e.target.closest('.drawer-menu-toggle')) return;
           const link = this.getAttribute('data-link');
-          if (link) {
+          if (!hoverQuery.matches) {
+            // Touch: tapping the whole row expands/collapses the submenu (the
+            // small chevron alone was easy to miss). Each group's own page is
+            // already the first item in its submenu, so nothing is lost.
+            toggleGroup(this.closest('.drawer-menu-group'));
+          } else if (link) {
             handleNavigation(link);
           } else {
-            toggleGroup(this.closest('.drawer-menu-group'));
+            // Mouse: clicking a no-page header (e.g. Special Events) shows its flyout right away
+            clearTimeout(aimTimeout);
+            setActiveGroup(this.closest('.drawer-menu-group'));
           }
         });
       });
@@ -246,13 +326,6 @@
           toggleGroup(this.closest('.drawer-menu-group'));
         });
       });
-
-      // On hover-capable devices, open each flyout on hover with a grace
-      // period before closing - reaching a lower item means moving the
-      // pointer diagonally, which briefly crosses dead space between the
-      // trigger row and the flyout. Closing instantly (plain CSS :hover)
-      // makes the flyout vanish mid-crossing.
-      mobileMenuList.querySelectorAll('.drawer-menu-group').forEach(attachSubmenuHover);
     }
 
     // Render footer menu - flattened so every page stays reachable
