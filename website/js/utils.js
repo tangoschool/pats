@@ -113,8 +113,16 @@
           })()
         : '';
 
+      // Optional per-teaser cap on image width (e.g. a tall logo that would
+      // otherwise stand much taller than its text). Set "imageMaxWidth": 280
+      // on the teaser in content.json.
+      const imageStyle = teaser.imageMaxWidth
+        ? ` style="--teaser-image-max:${parseInt(teaser.imageMaxWidth, 10)}px"`
+        : '';
+      const imageClass = teaser.imageMaxWidth ? 'teaser__image teaser__image--capped' : 'teaser__image';
+
       article.innerHTML = `
-        ${imageHtml ? `<div class="teaser__image">${imageHtml}</div>` : ''}
+        ${imageHtml ? `<div class="${imageClass}"${imageStyle}>${imageHtml}</div>` : ''}
         <div class="teaser__content">
           <h2>${teaser.headline || ''}</h2>
           <div class="content">${parseMarkdown(teaser.content || '')}</div>

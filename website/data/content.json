@@ -4375,6 +4375,7 @@
       "videoUrl": "",
       "linkText": "Read more →",
       "link": "new-registration-site",
+      "imageMaxWidth": 260,
       "image": {
         "url": "/images/Tango-Logo-01.jpg",
         "localPath": "/images/Tango-Logo-01.jpg",

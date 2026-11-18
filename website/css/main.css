@@ -614,6 +614,14 @@ a:hover {
   min-width: 300px;
 }
 
+/* Teaser with "imageMaxWidth" set in content.json: fixed narrower image
+   column so a tall image (like the logo) doesn't outgrow its text. */
+.teaser__image--capped {
+  flex: 0 0 var(--teaser-image-max);
+  min-width: 0;
+  max-width: var(--teaser-image-max);
+}
+
 .teaser__content > h2 {
   color: var(--color-primary);
   margin: 0 0 15px 0;
@@ -722,6 +730,16 @@ a:hover {
   .press-page .teaser__image {
     min-width: 100%;
     max-width: 100%;
+  }
+
+  /* On phones, keep a capped image at its small size, centered, instead of
+     stretching it to full screen width. */
+  .teaser__image--capped {
+    flex: none;
+    width: 100%;
+    max-width: var(--teaser-image-max);
+    min-width: 0;
+    margin: 0 auto;
   }
 
   .teaser__content {
