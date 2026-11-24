@@ -626,12 +626,13 @@ a:hover {
   padding-top: 40px;
 }
 
-/* Teaser with "imageMaxWidth" set in content.json: fixed narrower image
-   column so a tall image (like the logo) doesn't outgrow its text. */
-.teaser__image--capped {
-  flex: 0 0 var(--teaser-image-max);
-  min-width: 0;
+/* Teaser with "imageMaxWidth" set in content.json: the image COLUMN keeps
+   the standard width (so every teaser's text starts in the same place);
+   only the picture inside it is drawn smaller, centered in the column.
+   Used for tall images (like the logo) that would outgrow their text. */
+.teaser__image--capped img {
   max-width: var(--teaser-image-max);
+  margin: 0 auto;
 }
 
 .teaser__content > h2 {
@@ -757,16 +758,6 @@ a:hover {
 
   .teasers--after-text > .teaser:first-child {
     margin-top: 0;
-  }
-
-  /* On phones, keep a capped image at its small size, centered, instead of
-     stretching it to full screen width. */
-  .teaser__image--capped {
-    flex: none;
-    width: 100%;
-    max-width: var(--teaser-image-max);
-    min-width: 0;
-    margin: 0 auto;
   }
 
   .teaser__content {
